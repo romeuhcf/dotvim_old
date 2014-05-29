@@ -43,5 +43,17 @@ set -e
   test -d vim-powerline || git clone https://github.com/Lokaltog/vim-powerline.git
 )
 
+(
+  echo "* GitGutter"
+  cd ~/.vim/bundle
+  test -d vim-gitgutter || git clone https://github.com/airblade/vim-gitgutter.git
+) 
+
+(
+  echo "* Solarized theme"
+  cd ~/.vim/bundle
+  test -d vim-colors-solarized || git clone https://github.com/altercation/vim-colors-solarized.git
+)
+
 echo "VIMRC"
 cp vimrc.vim ~/.vimrc

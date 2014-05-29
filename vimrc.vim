@@ -1,14 +1,31 @@
 execute pathogen#infect()
 filetype plugin indent on
 set nocompatible
-syntax on
 set tabstop=2
 set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
+
+" Indent automatically depending on filetype
+filetype indent on
+set autoindent
+
+" Turn on line numbering. Turn it off with "set nonu" 
 set number
-colorscheme darkblue
+
+" Set syntax on
+syntax on
+
+" Case insensitive search
+set ic
+
+" Higlhight search
+set hls
+
+
+" Wrap text instead of being on one line
+" set lbr
 
 let mapleader = ","
 
@@ -44,3 +61,17 @@ vmap <leader>/ :call NERDComment(0, "invert")<cr>
 " CONTROL P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+
+" powerline
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+let g:Powerline_symbols = 'unicode'
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+
+
+" SOLARIZED
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
+highlight clear SignColumn
