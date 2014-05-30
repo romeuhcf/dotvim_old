@@ -1,0 +1,8 @@
+General Vim confs (for ubuntus)
+
+1 - Bkp and remove all of your ~/.vim* ~/.gvim* stuff
+2 - git clone me
+3 - ./install.sh (will require password for sudo at some point - to install compilation tools)
+
+
+Just that.
