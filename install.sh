@@ -5,7 +5,7 @@ ROOT=~/.vim/janus/vim/tools
 test -d $ROOT || curl -Lo- https://bit.ly/janus-bootstrap | bash
 cd $ROOT
 
-for github in  airblade/vim-gitgutter  Lokaltog/vim-powerline  Valloric/YouCompleteMe
+for github in  airblade/vim-gitgutter  Lokaltog/vim-powerline  Valloric/YouCompleteMe  rking/ag.vim
 do
   TOOL=$( basename "$github" )
   echo " * Installing $TOOL"
@@ -15,10 +15,9 @@ done
 
 cd $ROOT/YouCompleteMe
 git submodule update --init --recursive
-sudo apt-get install cmake python-dev build-essential
+sudo apt-get install cmake python-dev build-essential silversearcher-ag
 if [ ! -f $ROOT/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
   cmake -G "Unix Makefiles" . $ROOT/YouCompleteMe/third_party/ycmd/cpp
   make ycm_support_libs
 fi
-
 
